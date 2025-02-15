@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uk-ji | 나의 건강을 공유하다</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- ✅ 네비게이션 바 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="../img/Uk-Ji_logo.png" alt="Uk-ji 로고" class="logo-img"></a>
+            <div class="logo-text">
+                <h1><a href='index.html'>Uk-ji</a></h1>
+                <p class="subtitle">나의 건강을 공유하다.</p> <!-- 👈 하단으로 이동 -->
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="company.html">소개</a></li>
+                <li><a href="product_news.html">제품뉴스</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+            <button onclick="">🔍</button>
+            <a href="login.html" class="btn">로그인</a>
+            <a href='signup.html' class="btn">회원가입</button>
+            <a href="/mypage" class="mypage-icon">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </header>
+
+    <!-- ✅ 메인 배너 -->
+    <section class="main-banner">
+        <img src="../img/health_banner.webp" alt="건강을 위한 최고의 선택, Uk-ji">
+    </section>
+
+    <!-- ✅ 주요 기능 아이콘 -->
+    <section class="main-icons">
+        <a href="products.html"class=icon-link>
+            <div class="icon-box">
+                <span>💊🔍</span>
+                <button>건강 식품 및 약</button>
+        </div> </a>
+        <a href="#"class=icon-link>
+            <div class="icon-box">
+                <span>😊</span>
+                <button>리뷰</button>
+            </div>
+        </a>
+        <a href="board.html"class=icon-link>
+            <div class="icon-box">
+                <span>💙</span>
+                <button>커뮤니티</button>
+            </div>
+        </a>
+        <a href="board.html"class=icon-link>
+            <div class="icon-box">
+                <span>💼</span>
+                <button>직업별 커뮤니티</button>
+            </div>
+        </a>
+    </section>
+
+    <!-- ✅ 인기 게시물 & 리뷰 리스트 -->
+    <section class="content">
+        <div class="popular-posts">
+            <h2>📝 인기 게시물</h2>
+            <ul>
+                <li><a href="#">📌 건강한 식단을 위한 5가지 팁</a></li>
+                <li><a href="#">📌 하루 10분 스트레칭 루틴</a></li>
+                <li><a href="#">📌 면역력 강화에 좋은 영양제 추천</a></li>
+                <li><a href="#">📌 건강한 수면 습관 만들기</a></li>
+            </ul>
+        </div>
+
+        <div class="latest-reviews">
+            <h2>⭐ 최신 리뷰</h2>
+            <ul>
+                <li><a href="#">💊 비타민C 보충제 효과는 어떨까?</a></li>
+                <li><a href="#">🩺 프로바이오틱스 추천 & 후기</a></li>
+                <li><a href="#">💪 단백질 보충제 비교 분석</a></li>
+                <li><a href="#">🛌 멜라토닌 수면제 후기</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ✅ 건강 정보 섹션 -->
+    <section class="health-tips">
+        <h2>💡 추천 건강 정보</h2>
+        <div class="tips-container">
+            <div class="tip-card">
+                <img src="../img/health_menu.webp" alt="건강한 식단">
+                <h3>🥗 건강한 식단</h3>
+                <p>균형 잡힌 영양 섭취로 면역력을 높이는 법!</p>
+            </div>
+            <div class="tip-card">
+                <img src="../img/health_habit.webp" alt="운동 루틴">
+                <h3>🏃‍♂️ 운동 루틴</h3>
+                <p>하루 10분 스트레칭으로 건강 지키기</p>
+            </div>
+            <div class="tip-card">
+                <img src="../img/health_sleep.webp" alt="수면 습관">
+                <h3>😴 좋은 수면 습관</h3>
+                <p>꿀잠 자는 법! 수면 질을 높이는 꿀팁</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ 인기 상품 -->
+    <section class="popular-products">
+        <h2>🔥 인기 상품</h2>
+        <div class="product-grid">
+            <!-- 상품 1 -->
+            <div class="product-card">
+                <img src="product1.jpg" alt="Haldiram's Sev Bhujia">
+                <div class="product-info">
+                    <span class="category">Snack & Munchies</span>
+                    <h3>Haldiram's Sev Bhujia</h3>
+                    <p class="rating">⭐⭐⭐⭐ 4.3 (4)</p>
+                    <p class="price">
+                        <span class="new-price">$21.6</span>
+                        <span class="old-price">$24</span>
+                        <span class="discount">🔻 10%</span>
+                    </p>
+                </div>
+                <button class="add-btn">+ Add</button>
+            </div>
+
+            <!-- 상품 2 -->
+            <div class="product-card">
+                <img src="product2.jpg" alt="NutriChoice Digestive">
+                <div class="product-info">
+                    <span class="category">Bakery & Biscuits</span>
+                    <h3>NutriChoice Digestive</h3>
+                    <p class="rating">⭐⭐⭐⭐ 4.3 (4)</p>
+                    <p class="price">
+                        <span class="new-price">$24</span>
+                    </p>
+                </div>
+                <button class="add-btn">+ Add</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ 푸터 -->
+    <footer>
+        <!-- 이메일 구독 -->
+        <div class="newsletter">
+            <h3>이메일로 최신 건강 정보와 할인 소식을 받아보세요!</h3>
+            <input type="email" placeholder="이메일 주소 입력">
+            <button>신청하기</button>
+        </div>
+
+        <div class="footer-top">
+            <!-- 회사 소개 -->
+            <div class="footer-section">
+                <h2>Uk-ji</h2>
+                <p>건강한 삶을 위한 최고의 선택! <br> 믿을 수 있는 영양제 정보와 커뮤니티를 제공합니다.</p>
+            </div>
+    
+            <!-- 유용한 링크 -->
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <ul>
+                    <li><a href="company.html">회사 소개</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">제휴 프로그램</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+    
+            <!-- SNS & 앱 다운로드 -->
+            <div class="footer-section">
+                <h3>팔로우하세요</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../img/facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="../img/instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="../img/youtube_icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 저작권 및 정책 -->
+        <div class="footer-bottom">
+            <p>© 2025 Uk-ji. 모든 권리 보유. 모든 권한은 Uk-ji에 있습니다.</p>
+            <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
