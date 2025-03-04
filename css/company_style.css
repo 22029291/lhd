@@ -1,0 +1,337 @@
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 회사 소개 스타일 */
+.company-intro {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.company-intro img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.vision-mission {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.team {
+    text-align: center;
+    padding: 50px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 모바일 반응형 (최대 768px) */
+@media (max-width: 768px) {
+    /* 🔹 네비게이션 바 */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* 🔹 회사 소개 */
+    .company-intro {
+        padding: 30px;
+    }
+
+    .company-intro img {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .vision-mission {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* 🔹 팀 섹션 */
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* 🔹 고객 후기 */
+    .testimonial {
+        max-width: 90%;
+    }
+
+    /* 🔹 푸터 */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 🔹 이메일 구독 */
+    .newsletter-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%;
+    }
+}

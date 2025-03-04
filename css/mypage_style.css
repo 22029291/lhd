@@ -1,0 +1,332 @@
+/* ✅ 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ 메인 컨테이너 (레이아웃 수정) */
+.container {
+    display: flex;
+    max-width: 1200px; /* 기존보다 넓게 */
+    margin: 20px auto;
+    gap: 20px;
+    align-items: flex-start; /* 🔥 상단 정렬 */
+}
+
+/* ✅ 사이드바 (너비 조정) */
+.sidebar {
+    width: 280px; /* 기존보다 조금 넓게 */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* 크기 고정 */
+}
+
+/* ✅ 프로필 영역 */
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* 🔥 비율 유지하면서 크롭 */
+}
+
+.profile-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 12px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background: #005fa3;
+}
+
+/* ✅ 메뉴 스타일 */
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu li:hover {
+    background: #eee;
+}
+
+.menu .danger {
+    color: red;
+}
+
+/* ✅ 메인 컨텐츠 (너비 균형 조정) */
+.content {
+    flex-grow: 1; /* 🔥 사이드바 제외한 나머지 공간 차지 */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* 🔥 최소 높이 지정 */
+}
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 반응형 (모바일 최적화) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .newsletter-container {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .newsletter input[type="email"] {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .newsletter button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

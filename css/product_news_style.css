@@ -1,0 +1,415 @@
+/* ✅ 기본 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 검색창 & 유저 메뉴 */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-menu input {
+    width: 280px;
+    height: 35px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.user-menu input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ✅ 마이페이지 아이콘 스타일 (항상 보이게) */
+.mypage-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0077cc; /* 기본적으로 보이도록 색상 지정 */
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mypage-icon:hover {
+    color: #005fa3;
+}
+
+
+
+/* ✅ 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ 최신 제품 뉴스 컨테이너 */
+.news-container {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.news-container h2 {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 30px;
+}
+
+/* ✅ 인기 제품 뉴스 컨테이너 */
+.hot-news-container {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.hot-news-container h2 {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 30px;
+}
+/* ✅ 가성비 제품 뉴스 컨테이너 */
+.cheap-news-container {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.cheap-news-container h2 {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 30px;
+}
+
+/* ✅ 뉴스 카드 스타일 */
+.news-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.news-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h2 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 모바일 반응형 (최대 768px) */
+@media (max-width: 768px) {
+    /* 🔹 네비게이션 바 */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* 🔹 검색창 & 유저 메뉴 */
+    .user-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .user-menu input {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    /* 🔹 뉴스 카드 */
+    .news-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card {
+        width: 90%;
+    }
+
+    /* 🔹 푸터 */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 🔹 이메일 구독 */
+    .newsletter-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%;
+    }
+}

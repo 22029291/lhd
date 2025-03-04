@@ -1,0 +1,637 @@
+/* ✅ 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 전체 컨테이너 설정 */
+.container {
+    max-width: 1200px;
+    width: 90%;  /* 🔥 기존보다 더 넓게 조정 */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* 상단 버튼 아래에 사이드바를 배치 */
+    gap: 20px;
+}
+.container h1 {
+    margin-left: -150px;
+}
+/* 콘텐츠 래퍼 (사이드바 + 게시판) */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* 사이드바와 게시판 위쪽 정렬 */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* ✅ 사이드바 */
+.sidebar {
+    width: 250px;
+    background: #1F2A40;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    margin-left: -200px;
+    margin-bottom: 30px;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    color: #FFFFFF; /* 흰색 글씨 */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 카테고리 리스트 */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 연한 선 */
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* 기본 흰색 */
+    font-weight: bold;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    background: #324A75; /* 고급스러운 블루 */
+    color: #FFD700; /* 골드 포인트 */
+    transform: translateX(5px); /* 살짝 이동 효과 */
+}
+
+
+
+/* ✅ 필터 스타일 */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-container label {
+    font-weight: bold;
+}
+
+.filter-container select, .filter-container button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-container button:hover {
+    background-color: #0056b3;
+}
+
+/* ✅ 커뮤니티 메뉴 */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 10px 0;
+    margin-left: -180px;
+}
+
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* 아이콘과 텍스트 간격 */
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons a i {
+    font-size: 18px; /* 아이콘 크기 */
+}
+
+.nav-buttons a:hover {
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* ✅ 게시판 목록 */
+.board-list {
+    flex: 1;
+    background: #FFF;
+    margin-right: 20px; /* 🔥 오른쪽 여백 줄이기 (기본값보다 작게 조정) */
+    width: 100%; /* 게시판 너비를 최대로 조정해 더 꽉 차게 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board-list h2 {
+    text-align: center;
+    color: #222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #343a40; /* 어두운 네이비 */
+    color: #ffffff; /* 화이트 */
+    font-weight: bold;
+}
+
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* 페이지네이션 */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 글쓰기 폼 스타일 */
+.write-post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.write-post h2 {
+    text-align: center;
+    color: #222;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 반응형 디자인 */
+
+/* 📌 1024px 이하 - 태블릿 대응 */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .board-list {
+        width: 100%;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+        margin-left: 0;
+    }
+}
+
+/* 📌 768px 이하 - 모바일 대응 */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo-img {
+        width: 100px; /* 로고 크기 축소 */
+    }
+
+    .logo h1 a {
+        font-size: 20px;
+    }
+
+    .user-menu input {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .board-list {
+        width: 100%;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .nav-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-buttons a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .newsletter-container {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%;
+    }
+}
+
+/* 📌 480px 이하 - 작은 모바일 화면 대응 */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+    .logo h1 a {
+        font-size: 18px;
+    }
+
+    .user-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .user-menu input {
+        width: 90%;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .sidebar h3 {
+        font-size: 16px;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .board-list h2 {
+        font-size: 18px;
+    }
+
+    table,
+    th,
+    td {
+        font-size: 12px;
+    }
+
+    .pagination a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .newsletter-container {
+        font-size: 14px;
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
+}

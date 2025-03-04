@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uk-ji 건강 쇼핑몰</title>
+    <link rel="stylesheet" href="../css/products_style.css">
+</head>
+<body>
+
+     <!-- ✅ 네비게이션 바 -->
+     <header>
+        <div class="logo">
+            <a href="index.html"><img src="../img/Logo.png" alt="Uk-ji 로고" class="logo-img"></a>
+            <div class="logo-text">
+                <h1><a href='index.html'>Uk-ji</a></h1>
+                <p class="subtitle">나의 건강을 공유하다.</p> <!-- 👈 하단으로 이동 -->
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="company.html">소개</a></li>
+                <li><a href="product_news.html">제품뉴스</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="service.html">고객센터</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+            <a href="login.html" class="btn">로그인</a>
+            <a href='signup.html' class="btn">회원가입</button>
+            <a href="mypage.html" class="mypage-icon">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </header>
+    
+
+    <!-- 🟡 필터링 섹션 -->
+    <div class="main-container">
+        <div class="filter-container">
+            <h3>필터</h3>
+
+            <a href="#" onclick="clearAllFilters()">Clear All</a>
+            <div id="filter-tags"></div>
+
+            <div id="filters">
+                <h3>성별</h3>
+                <label><input type="radio" name="gender" value="남자" onclick="toggleFilter(this)"> 남자</label>
+                <label><input type="radio" name="gender" value="여자" onclick="toggleFilter(this)"> 여자</label>
+            
+                <h3>나이</h3>
+                <label><input type="radio" name="age" value="영유아 0~6세" onclick="toggleFilter(this)"> 영유아 0~6세</label>
+                <label><input type="radio" name="age" value="어린이&청소년 7~18세" onclick="toggleFilter(this)"> 어린이&청소년 7~18세</label>
+                <label><input type="radio" name="age" value="청년층 20~30대" onclick="toggleFilter(this)"> 청년층 20~30대</label>
+                <label><input type="radio" name="age" value="중년층 40~50대" onclick="toggleFilter(this)"> 중년층 40~50대</label>
+                <label><input type="radio" name="age" value="노년층 60대" onclick="toggleFilter(this)"> 노년층 60대</label>
+            
+                <h3>제품 형태</h3>
+                <label><input type="radio" name="product-type" value="캡슐, 정제형" onclick="toggleFilter(this)"> 캡슐, 정제형</label>
+                <label><input type="radio" name="product-type" value="분말형" onclick="toggleFilter(this)"> 분말형</label>
+                <label><input type="radio" name="product-type" value="액상형" onclick="toggleFilter(this)"> 액상형</label>
+                <label><input type="radio" name="product-type" value="젤리, 구미형" onclick="toggleFilter(this)"> 젤리, 구미형</label>
+                
+                <script src="../js/products_js.js"></script>
+            
+            </div>
+        </div>
+
+        <!-- 🟠 상품 리스트 -->
+        <div class="product-container">
+            <div class="sort-options">
+                <label>정렬 기준:</label>
+                <select>
+                    <option>인기순</option>
+                    <option>최신순</option>
+                    <option>가격 낮은순</option>
+                    <option>가격 높은순</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+                <a href='product_detail.html'><div class="product-card">
+                    <img src="../img/bitamin.jpg" alt="Product">
+                    <p class="title"> Product Title</p>
+                    <p class="price">24,500원</p>
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ 푸터 -->
+    <footer>
+        <!-- 이메일 구독 -->
+        <div class="newsletter">
+            <h3>이메일로 최신 건강 정보와 할인 소식을 받아보세요!</h3>
+            <input type="email" placeholder="이메일 주소 입력">
+            <button>신청하기</button>
+        </div>
+
+        <div class="footer-top">
+            <!-- 회사 소개 -->
+            <div class="footer-section">
+                <h2>Uk-ji</h2>
+                <p>건강한 삶을 위한 최고의 선택! <br> 믿을 수 있는 영양제 정보와 커뮤니티를 제공합니다.</p>
+            </div>
+    
+            <!-- 유용한 링크 -->
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <ul>
+                    <li><a href="company.html">회사 소개</a></li>
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="#">제휴 프로그램</a></li>
+                    <li><a href="service.html">고객센터</a></li>
+                </ul>
+            </div>
+    
+            <!-- SNS & 앱 다운로드 -->
+            <div class="footer-section">
+                <h3>팔로우하세요</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../img/facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="../img/instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="../img/youtube_icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 저작권 및 정책 -->
+        <div class="footer-bottom">
+            <p>© 2025 Uk-ji. 모든 권리 보유. 모든 권한은 Uk-ji에 있습니다.</p>
+            <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

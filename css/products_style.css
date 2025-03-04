@@ -1,0 +1,462 @@
+/* ✅ 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 전체 높이 100% 유지 */
+}
+
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 검색창 & 유저 메뉴 */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-menu input {
+    width: 280px;
+    height: 35px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.user-menu input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* ✅ 마이페이지 아이콘 스타일 (항상 보이게) */
+.mypage-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0077cc; /* 기본적으로 보이도록 색상 지정 */
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mypage-icon:hover {
+    color: #005fa3;
+}
+
+/* ✅ 버튼 스타일 */
+.btn {
+    text-decoration: none;
+    background-color: #0077cc;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: inline-block;  /* 버튼 크기 유지 */
+    padding: 8px 16px;  /* 내부 여백 설정 */
+    background-color: #007bff;  /* 기존 버튼 색상 */
+    color: white;  /* 글자 색상 */
+    text-decoration: none;  /* 링크 밑줄 제거 */
+    border-radius: 4px;  /* 모서리 둥글게 */
+    font-weight: bold;  /* 글자 굵기 */
+    text-align: center;  /* 텍스트 중앙 정렬 */
+}
+
+.btn:hover {
+    background-color: #005fa3;
+}
+
+/* ✅ 메인 컨텐츠 영역 (필터 + 상품 리스트) */
+.main-container {
+    display: flex;
+    align-items: flex-start;
+    flex: 1; /* 푸터가 항상 아래에 있도록 본문 확장 */
+    padding: 20px;
+    gap: 30px;
+}
+
+/* 전체 컨테이너 설정 */
+.content-wrapper {
+    display: flex;
+    max-width: 2000px;
+    align-items: flex-start;
+    margin: 0 auto; /* 🔥 가운데 정렬 */
+    gap: 20px;
+    width: 100%;
+}
+
+.filter-container {
+    width: 250px;
+    position: relative; /* ✅ 레이아웃 깨짐 방지 */
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* 라디오 버튼과 체크박스를 오른쪽에 배치 */
+.filter-container label {
+    display: inline-block;
+    margin-left: 5px; /* 버튼과 라벨 간격 조절 */
+}
+
+/* 라디오 버튼과 체크박스 정렬 */
+.filter-container input[type="radio"],
+.filter-container input[type="checkbox"] {
+    vertical-align: middle; /* 버튼과 텍스트를 수직 정렬 */
+    margin-right: 5px; /* 오른쪽 여백 추가 */
+}
+
+/* 선택한 필터를 표시하는 영역 스타일 */
+#selected-filters {
+    margin-bottom: 10px;
+}
+
+/* 선택한 필터 태그 스타일 */
+#filter-tags {
+    display: flex;         /* 가로 정렬 */
+    flex-wrap: wrap;       /* 여러 줄로 정렬 가능 */
+    gap: 8px;             /* 태그 간격 */
+    margin-top: 5px;
+}
+
+/* 필터 태그 디자인 */
+.filter-tag {
+    background-color: #1e73be;  /* 파란색 배경 */
+    color: white;               /* 글씨 흰색 */
+    padding: 5px 10px;
+    border-radius: 15px;        /* 둥근 모서리 */
+    display: flex;
+    align-items: center;
+}
+
+/* "X" 버튼 스타일 */
+.filter-tag button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 기존 필터 영역(라디오 버튼) 스타일 유지 */
+#filters {
+    padding: 10px;
+}
+
+#filters label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* 라디오 버튼을 왼쪽, 텍스트를 오른쪽으로 정렬 */
+#filters input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* ✅ 상품을 감싸는 메인 컨테이너 */
+.product-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* 🔥 상품 리스트를 중앙 정렬 */
+    width: 100%;
+    padding: 20px;
+}
+
+/* ✅ 상품 리스트 컨테이너 */
+.product-container {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* 🔥 자동 조정되는 그리드 */
+    gap: 20px;
+    justify-content: center;
+    width: 95%;
+    max-width: 1800px;
+    margin-left: 20px;
+}
+
+/* ✅ 상품 리스트 4 x 4 정렬 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 🔥 한 줄에 5개 유지 */
+    gap: 25px;
+    justify-content: center; /* ✅ 가운데 정렬 */
+    align-items: start; /* 🔥 높이 차이 방지 */
+    width: 100%;
+    max-width: 1800px;
+    margin-right: 150px;
+}
+
+
+/* ✅ 개별 상품 카드 스타일 */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    background: white;
+    width: 100%;
+    max-width: 300px; /* 🔥 상품 카드 최대 크기 조정 */
+    min-height: 400px; /* 🔥 높이 조정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* ✅ 마우스 오버 시 부드러운 효과 */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ 상품 이미지 스타일 */
+.product-card img {
+    width: 100%; /* 🔥 가로 최대 크기 맞추기 */
+    height: 100%; /* 🔥 비율 유지 */
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ✅ 반응형 설정 */
+@media (max-width: 1600px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 반응형 (모바일 최적화) */
+@media (max-width: 768px) {
+    .newsletter-container {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .newsletter input[type="email"] {
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .newsletter button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

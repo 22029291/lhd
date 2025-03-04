@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uk-ji | 나의 건강을 공유하다</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper.js JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- ✅ 네비게이션 바 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="../img/Logo.png" alt="Uk-ji 로고" class="logo-img"></a>
+            <div class="logo-text">
+                <h1><a href='index.html'>Uk-ji</a></h1>
+                <p class="subtitle">나의 건강을 공유하다.</p> <!-- 👈 하단으로 이동 -->
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="company.html">소개</a></li>
+                <li><a href="product_news.html">제품뉴스</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+            <a href="login.html" class="btn">로그인</a>
+            <a href='signup.html' class="btn">회원가입</button>
+            <a href="mypage.html" class="btn">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </header>
+
+    <main>
+        <section class="main-search">
+            <div class="search-box">
+                <input type="text" placeholder="어떤 정보를 찾고 계신가요?">
+                <button></button>
+            </div>
+        </section>
+        <script src="../js/index.js"></script>
+    </main>
+    
+    
+
+    <!-- ✅ 주요 기능 아이콘 -->
+    <section class="main-icons">
+        <a href="products.html"class=icon-link>
+            <div class="icon-box">
+                <span>💊</span>
+                <button>건강 식품 소개</button>
+        </div> </a>
+        <a href="board.html"class=icon-link>
+            <div class="icon-box">
+                <span>💼</span>
+                <button>직업별 커뮤니티</button>
+            </div>
+        </a>
+    </section>
+
+    <!-- ✅ 슬라이드 배너 컨테이너 -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- 🌟 개별 슬라이드 -->
+            <div class="swiper-slide">
+                <img src="../img/collagen.webp" alt="배너 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/multivitamin.webp" alt="배너 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/Omega3.webp" alt="배너 3">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/probiotic.webp" alt="배너 4">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/strength.webp" alt="배너 5">
+            </div>
+        </div>
+
+        <!-- 🔽 네비게이션 버튼 (좌/우) -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- 🔵 페이지네이션 (하단 도트) -->
+        <div class="swiper-pagination"></div>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                loop: true,  // 🔄 무한 반복
+                autoplay: {
+                    delay: 5000, // ⏳ 3초마다 자동 이동
+                    disableOnInteraction: false, // 🖱️ 사용자가 터치해도 자동 슬라이드 유지
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next", // 👉 다음 버튼
+                    prevEl: ".swiper-button-prev", // 👈 이전 버튼
+                },
+                pagination: {
+                    el: ".swiper-pagination", // 🔵 페이지네이션 (도트)
+                    clickable: true, // 🖱️ 도트 클릭 가능
+                },
+            });
+        </script>
+        
+    </div>
+
+    <!-- ✅ 건강 정보 섹션 -->
+    <section class="health-tips">
+        <h2>💡 추천 건강 정보</h2>
+        <div class="tips-container">
+            <div class="tip-card">
+                <img src="../img/health_menu.webp" alt="건강한 식단">
+                <h3>🥗 건강한 식단</h3>
+                <p>균형 잡힌 영양 섭취로 면역력을 높이는 법!</p>
+            </div>
+            <div class="tip-card">
+                <img src="../img/health_habit.webp" alt="운동 루틴">
+                <h3>🏃‍♂️ 운동 루틴</h3>
+                <p>하루 10분 스트레칭으로 건강 지키기</p>
+            </div>
+            <div class="tip-card">
+                <img src="../img/health_sleep.webp" alt="수면 습관">
+                <h3>😴 좋은 수면 습관</h3>
+                <p>꿀잠 자는 법! 수면 질을 높이는 꿀팁</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="recommended-videos">
+        <h2>추천 영상</h2>
+        <div class="video-grid">
+            <!-- 🎥 첫 번째 영상 -->
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=6JUicG0729g&t=42s" target="_blank">
+                    <img src="../img/goyunjong.jpg" alt="너 꼬실 때 듣는 노래">
+                    <p>너 꼬실 때 듣는 노래</p>
+                </a>
+            </div>
+    
+            <!-- 🎥 두 번째 영상 -->
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=영상ID2" target="_blank">
+                    <img src="https://img.youtube.com/vi/영상ID2/0.jpg" alt="영상 제목 2">
+                    <p>영양제 딱 하나만 먹는다면?!</p>
+                </a>
+            </div>
+    
+            <!-- 🎥 세 번째 영상 -->
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=영상ID3" target="_blank">
+                    <img src="https://img.youtube.com/vi/영상ID3/0.jpg" alt="영상 제목 3">
+                    <p>남자들이 꼭 먹었으면 하는 영양제</p>
+                </a>
+            </div>
+    
+            <!-- 🎥 네 번째 영상 -->
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=영상ID4" target="_blank">
+                    <img src="https://img.youtube.com/vi/영상ID4/0.jpg" alt="영상 제목 4">
+                    <p>다이소 영양제 총정리!!</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- ✅ 푸터 -->
+    <footer>
+        <!-- 이메일 구독 -->
+        <div class="newsletter">
+            <h3>이메일로 최신 건강 정보와 할인 소식을 받아보세요!</h3>
+            <input type="email" placeholder="이메일 주소 입력">
+            <button>신청하기</button>
+        </div>
+
+        <div class="footer-top">
+            <!-- 회사 소개 -->
+            <div class="footer-section">
+                <h2>Uk-ji</h2>
+                <p>건강한 삶을 위한 최고의 선택! <br> 믿을 수 있는 영양제 정보와 커뮤니티를 제공합니다.</p>
+            </div>
+    
+            <!-- 유용한 링크 -->
+            <div class="footer-section">
+                <h3>회사 정보</h3>
+                <ul>
+                    <li><a href="company.html">회사 소개</a></li>
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="#">제휴 프로그램</a></li>
+                </ul>
+            </div>
+    
+            <!-- SNS & 앱 다운로드 -->
+            <div class="footer-section">
+                <h3>팔로우하세요</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../img/facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="../img/instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="../img/youtube_icon.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- 저작권 및 정책 -->
+        <div class="footer-bottom">
+            <p>© 2025 Uk-ji. 모든 권리 보유. 모든 권한은 Uk-ji에 있습니다.</p>
+            <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

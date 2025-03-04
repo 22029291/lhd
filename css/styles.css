@@ -1,0 +1,578 @@
+/* ✅ 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ✅ 네비게이션 바 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 로고 영역 스타일 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 로고와 텍스트 사이 간격 */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 120px; /* 로고 크기 조절 */
+    height: auto;
+}
+
+
+.logo h1 a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .subtitle {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ✅ 네비게이션 메뉴 */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 버튼 스타일 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2C2C2C, #4B4F54);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #1C1F2B, #3A3F44);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ 메인 검색 스타일 */
+.main-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+}
+/* ✅ 검색창 스타일 */
+.search-box {
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 60px;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-box input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ 돋보기 버튼 */
+.search-box button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-box button:hover {
+    background: #f0f0f0;
+}
+
+.search-box button::before {
+    content: "🔍";
+    font-size: 20px;
+    color: #0077cc;
+}
+
+/* ✅ 주요 기능 아이콘 섹션 */
+.main-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 🔥 아이콘 사이 간격 */
+    margin: 40px 0;
+}
+
+/* ✅ 개별 아이콘 박스 스타일 */
+.icon-link {
+    display: block;  /* 블록 요소로 변경 */
+    text-decoration: none;  /* 기본 밑줄 제거 */
+    color: inherit;  /* 기본 글자색 유지 */
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* 🔥 기존보다 크기 키움 (기존: 100px) */
+    height: 200px; /* 🔥 크기 조정 */
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+    font-size: 50px; /* 🔥 아이콘 크기 키움 */
+    cursor: pointer;
+}
+
+.icon-box:hover {
+    transform: scale(1.1); /* 💡 마우스 올리면 커지는 효과 */
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    background: #e2e6ea;
+}
+
+/* ✅ 버튼 스타일 */
+.icon-box button {
+    margin-top: 10px;
+    font-size: 16px; /* 🔥 기존보다 폰트 크기 키움 */
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.icon-box button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 반응형 (모바일 최적화) */
+@media (max-width: 768px) {
+        /* 🔹 헤더 내부 요소를 세로 정렬 */
+        header {
+            flex-direction: column; /* 세로 정렬 */
+            align-items: center;
+            padding: 10px 15px; /* 패딩 줄이기 */
+        }
+    
+        /* 🔹 로고와 서브타이틀 조정 */
+        .logo {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        /* 🔹 네비게이션 메뉴를 세로 정렬 */
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px; /* 간격 조정 */
+        }
+    
+        /* 🔹 검색창 크기 조정 */
+        .user-menu input {
+            width: 100%; /* 전체 너비 */
+            max-width: 250px; /* 너무 커지지 않도록 제한 */
+        }
+    
+        /* 🔹 유저 메뉴(검색창 + 마이페이지 아이콘) 정렬 */
+        .user-menu {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+        }
+    
+        /* 🔹 버튼 크기 조정 */
+        .btn {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+    .main-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .icon-box {
+        width: 100px; /* 모바일에서 조금 작게 */
+        height: 100px;
+        font-size: 18px;
+    }
+
+    .icon-box button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+/* ✅ Swiper 배너 기본 스타일 */
+.swiper {
+    width: 100%;
+    height: 400px;  /* 🔥 원하는 높이로 조절 가능 */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* ✅ 슬라이드 내부 이미지 스타일 */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 💡 이미지가 꽉 차게 표시되도록 설정 */
+}
+
+/* ✅ 네비게이션 버튼 색상 조정 */
+.swiper-button-next, .swiper-button-prev {
+    color: #fff; /* 🔥 버튼 색상을 흰색으로 */
+}
+
+/* ✅ 페이지네이션 스타일 */
+.swiper-pagination-bullet {
+    background-color: #fff; /* 🔵 도트 색상 변경 */
+}
+
+/* ✅ 건강 정보 섹션 */
+.health-tips {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tip-card {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease; /* 마우스를 올렸을 때 부드러운 확대 효과 */
+}
+
+/* ✅ 마우스를 올렸을 때 확대 효과 */
+.tip-card:hover {
+    transform: scale(1.05); /* 1.05배 확대 */
+}
+
+.tip-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tip-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tip-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.recommended-videos {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개씩 배치 */
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.video-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.video-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ 푸터 */
+footer {
+    background: #222;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    padding: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #0077cc;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-bottom ul li {
+    list-style: none;
+}
+
+.footer-bottom ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #0077cc;
+}
+
+/* ✅ 이메일 구독 섹션 스타일 */
+.newsletter {
+    text-align: center;
+    padding: 30px 0; /* 🔥 위아래 여백 */
+    background-color: transparent; /* 💡 배경 투명하게 */
+}
+
+/* ✅ 초록색 구독 안내 배경 (가로 줄임) */
+.newsletter-container {
+    display: inline-block; /* 💡 내용 크기만큼만 적용 */
+    background-color: #4CAF50; /* 💚 초록색 배경 */
+    color: white; /* 🤍 가독성 좋은 흰색 글씨 */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px; /* 🔥 가로 줄여서 더 작게 */
+    border-radius: 10px;
+}
+
+/* ✅ 이메일 입력창 스타일 */
+.newsletter input[type="email"] {
+    width: 250px; /* 🔥 가로 길이 줄임 */
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+.newsletter input[type="email"]:focus {
+    border-color: #388E3C;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ✅ 신청하기 버튼 스타일 */
+.newsletter button {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px 15px;
+    background-color: #2E7D32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.newsletter button:hover {
+    background-color: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* ✅ 1024px 이하: 태블릿 사이즈 */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active + ul {
+        display: flex;
+    }
+
+    .search-box {
+        width: 80%;
+    }
+
+    .main-icons {
+        flex-wrap: wrap;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* ✅ 768px 이하: 모바일 */
+@media (max-width: 768px) {
+    .search-box {
+        width: 90%;
+    }
+
+    .icon-box {
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular-posts, .latest-reviews {
+        width: 100%;
+    }
+}
+
+/* ✅ 480px 이하: 작은 모바일 */
+@media (max-width: 480px) {
+    .icon-box {
+        width: 100px;
+        height: 100px;
+        font-size: 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

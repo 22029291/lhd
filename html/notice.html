@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 - Uk-ji</title>
+    <link rel="stylesheet" href="../css/notice_style.css">
+</head>
+<body>
+
+    <!-- ✅ 네비게이션 바 -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="../img/Logo.png" alt="Uk-ji 로고" class="logo-img"></a>
+            <div class="logo-text">
+                <h1><a href='index.html'>Uk-ji</a></h1>
+                <p class="subtitle">나의 건강을 공유하다.</p> <!-- 👈 하단으로 이동 -->
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="company.html">소개</a></li>
+                <li><a href="product_news.html">제품뉴스</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+            <a href="login.html" class="btn">로그인</a>
+            <a href='signup.html' class="btn">회원가입</button>
+            <a href="mypage.html" class="btn">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </header>
+
+
+    <!-- 📢 공지사항 게시판 -->
+    <main class="notice-container">
+        <h2>📢 공지사항</h2>
+
+        <!-- 카테고리 및 검색 -->
+        <div class="tab-search-container">
+            <div class="tabs">
+                <button class="tab-button active" data-category="all">전체</button>
+                <button class="tab-button" data-category="이벤트">이벤트</button>
+                <button class="tab-button" data-category="할인정보">할인정보</button>
+                <button class="tab-button" data-category="커뮤니티">커뮤니티</button>
+
+                <script src="../js/notice.js"></script>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="searchNotices()" placeholder="검색어 입력...">
+            </div>
+        </div>
+
+        <!-- 📝 공지사항 테이블 -->
+        <table class="notice-table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>분류</th>
+                    <th>제목</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="notice-row" data-category="할인정보">
+                    <td>3</td>
+                    <td>할인정보</td>
+                    <td><a href="notice_detail.html?id=3">⚡ 할인 행사 안내 ⚡</a></td>
+                    <td>2025-02-01</td>
+                    <td>21</td>
+                </tr>
+                <tr class="notice-row" data-category="커뮤니티">
+                    <td>2</td>
+                    <td>커뮤니티</td>
+                    <td><a href="notice_detail.html?id=2">👥 신규 회원 이벤트</a></td>
+                    <td>2025-02-01</td>
+                    <td>9</td>
+                </tr>
+                <tr class="notice-row" data-category="이벤트">
+                    <td>4</td>
+                    <td>이벤트</td>
+                    <td><a href="notice_detail.html?id=4">🎉 특별 프로모션 이벤트</a></td>
+                    <td>2025-02-01</td>
+                    <td>15</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 페이지네이션 -->
+        <div class="pagination">
+            <button class="prev-page">◀</button>
+            <button class="page-number active">1</button>
+            <button class="page-number">2</button>
+            <button class="page-number">3</button>
+            <button class="next-page">▶</button>
+        </div>
+    </main>
+
+<!-- ✅ 푸터 -->
+<footer>
+    <!-- 이메일 구독 -->
+    <div class="newsletter">
+        <h3>이메일로 최신 건강 정보와 할인 소식을 받아보세요!</h3>
+        <input type="email" placeholder="이메일 주소 입력">
+        <button>신청하기</button>
+    </div>
+
+    <div class="footer-top">
+        <!-- 회사 소개 -->
+        <div class="footer-section">
+            <h2>Uk-ji</h2>
+            <p>건강한 삶을 위한 최고의 선택! <br> 믿을 수 있는 영양제 정보와 커뮤니티를 제공합니다.</p>
+        </div>
+
+        <!-- 유용한 링크 -->
+        <div class="footer-section">
+            <h3>회사 정보</h3>
+            <ul>
+                <li><a href="company.html">회사 소개</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="#">제휴 프로그램</a></li>
+                <li><a href="service.html">고객센터</a></li>
+            </ul>
+        </div>
+
+        <!-- SNS & 앱 다운로드 -->
+        <div class="footer-section">
+            <h3>팔로우하세요</h3>
+            <div class="social-icons">
+                <a href="#"><img src="../img/facebook_icon.png" alt="Facebook"></a>
+                <a href="#"><img src="../img/instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="../img/youtube_icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저작권 및 정책 -->
+    <div class="footer-bottom">
+        <p>© 2025 Uk-ji. 모든 권리 보유. 모든 권한은 Uk-ji에 있습니다.</p>
+        <ul>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

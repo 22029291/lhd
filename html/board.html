@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="../css/board_style.css">
+</head>
+
+<!-- ✅ 네비게이션 바 -->
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="../img/Logo.png" alt="Uk-ji 로고" class="logo-img"></a>
+        <div class="logo-text">
+            <h1><a href='index.html'>Uk-ji</a></h1>
+            <p class="subtitle">나의 건강을 공유하다.</p> <!-- 👈 하단으로 이동 -->
+        </div>
+    </div>
+
+    <nav class="nav-links">
+        <ul>
+            <li><a href="company.html">소개</a></li>
+            <li><a href="product_news.html">제품뉴스</a></li>
+            <li><a href="notice.html">공지사항</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-menu">
+        <a href="login.html" class="btn">로그인</a>
+        <a href='signup.html' class="btn">회원가입</a>
+        <a href="mypage.html" class="btn">
+            <i class="fas fa-user-circle"></i>
+        </a>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</header>
+
+<!-- 필터 섹션 -->
+<div class="filter-container">
+    <label for="gender">성별:</label>
+    <select id="gender">
+        <option value="">전체</option>
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+    </select>
+
+    <label for="age">나이대:</label>
+    <select id="age">
+        <option value="">전체</option>
+        <option value="10s">10대</option>
+        <option value="20s">20대</option>
+        <option value="30s">30대</option>
+        <option value="40s">40대</option>
+        <option value="50s">50대+</option>
+    </select>
+
+    <label for="job">직업:</label>
+    <select id="job">
+        <option value="">전체</option>
+        <option value="student">학생</option>
+        <option value="worker">직장인</option>
+        <option value="self-employed">자영업</option>
+        <option value="others">기타</option>
+    </select>
+
+    <button onclick="filterPosts()">적용</button>
+    <script>
+        function filterPosts() {
+            let gender = document.getElementById("gender").value;
+            let age = document.getElementById("age").value;
+            let job = document.getElementById("job").value;
+    
+            let rows = document.querySelectorAll(".board-list tbody tr");
+    
+            rows.forEach(row => {
+                let postGender = row.getAttribute("data-gender");
+                let postAge = row.getAttribute("data-age");
+                let postJob = row.getAttribute("data-job");
+    
+                // 필터링 조건 확인
+                let genderMatch = (gender === "" || postGender === gender);
+                let ageMatch = (age === "" || postAge === age);
+                let jobMatch = (job === "" || postJob === job);
+    
+                if (genderMatch && ageMatch && jobMatch) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+    </script>
+    
+</div>
+
+
+<body>
+    <main class="container">
+        <h1>커뮤니티</h1>
+        <div class="nav-buttons">
+            <a href="board.html"><i class="fas fa-home"></i> 목록</a>
+            <a href="write.html"><i class="fas fa-edit"></i> 글쓰기</a>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- 왼쪽 카테고리 -->
+            <aside class="sidebar">
+                <h3>직업별 카테고리</h3>
+                <ul>
+                    <li><a href="#">👨‍⚕️ 의사</a></li>
+                    <li><a href="#">👩‍⚕️ 간호사</a></li>
+                    <li><a href="#">🔬 연구원</a></li>
+                    <li><a href="#">🥗 영양사</a></li>
+                    <li><a href="#">🏋️ 트레이너</a></li>
+                    <li><a href="#">📌 기타</a></li>
+                </ul>
+            </aside>
+
+            <section class="board-list">
+                <h2>게시글 목록</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-gender="male" data-age="30s" data-job="worker">
+                            <td>1</td>
+                            <td><a href="#">게시글 제목 1</a></td>
+                            <td>홍길동</td>
+                            <td>2024-12-08</td>
+                            <td>50</td>
+                        </tr>
+                        <tr data-gender="female" data-age="20s" data-job="student">
+                            <td>2</td>
+                            <td><a href="#">게시글 제목 2</a></td>
+                            <td>김철수</td>
+                            <td>2024-12-07</td>
+                            <td>35</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            <div class="pagination">
+                <a href="#">◀</a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">▶</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+ <!-- ✅ 푸터 -->
+ <footer>
+    <!-- 이메일 구독 -->
+    <div class="newsletter">
+        <h3>이메일로 최신 건강 정보와 할인 소식을 받아보세요!</h3>
+        <input type="email" placeholder="이메일 주소 입력">
+        <button>신청하기</button>
+    </div>
+
+    <div class="footer-top">
+        <!-- 회사 소개 -->
+        <div class="footer-section">
+            <h2>Uk-ji</h2>
+            <p>건강한 삶을 위한 최고의 선택! <br> 믿을 수 있는 영양제 정보와 커뮤니티를 제공합니다.</p>
+        </div>
+
+        <!-- 유용한 링크 -->
+        <div class="footer-section">
+            <h3>회사 정보</h3>
+            <ul>
+                <li><a href="company.html">회사 소개</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="#">제휴 프로그램</a></li>
+            </ul>
+        </div>
+
+        <!-- SNS & 앱 다운로드 -->
+        <div class="footer-section">
+            <h3>팔로우하세요</h3>
+            <div class="social-icons">
+                <a href="#"><img src="../img/facebook_icon.png" alt="Facebook"></a>
+                <a href="#"><img src="../img/instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="../img/youtube_icon.png" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저작권 및 정책 -->
+    <div class="footer-bottom">
+        <p>© 2025 Uk-ji. 모든 권리 보유. 모든 권한은 Uk-ji에 있습니다.</p>
+        <ul>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
